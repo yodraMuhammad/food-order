@@ -19,7 +19,7 @@
           <CardProduct :product="product" />
         </div>
       </div>
-    </div>
+    </div> 
   </div>
 </template>
 
@@ -51,9 +51,7 @@ export default {
     axios
       .get("http://localhost:3000/best-products")
       .then((response) => this.setProduct(response.data))
-      // .then((response) => console.log('berhasil :',response.data))
       .catch(function (error) {
-        // handle error
         console.log('Gagal :',error);
       })
   },

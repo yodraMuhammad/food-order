@@ -15,3 +15,13 @@
 .badge-success{
     background-color: #4EB883;
 }
+
+.breadcrumb{
+    background-color: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item.active {
+    font-weight: bold;
+    color: black;
+}
