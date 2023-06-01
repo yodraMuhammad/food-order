@@ -95,7 +95,7 @@ export default {
       if (this.pesan.jumlah_pemesanan > 0) {
         this.pesan.product = this.product;
         axios
-          .post("http://localhost:3000/keranjangs", this.pesan)
+          .post("https://kedu3h.sse.codesandbox.io/keranjangs", this.pesan)
           .then(() => {
             this.$router.push({path: "/keranjang"})
             this.$toast.success("Sukses Masuk Keranjang.", {
@@ -118,7 +118,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3000/products/" + this.$route.params.id)
+      .get("https://kedu3h.sse.codesandbox.io/products/" + this.$route.params.id)
       .then((response) => this.setProduct(response.data))
       .catch(function (error) {
         console.log("Gagal :", error);

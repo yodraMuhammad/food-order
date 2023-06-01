@@ -37,7 +37,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3000/keranjangs")
+      .get("https://kedu3h.sse.codesandbox.io/keranjangs")
       .then((response) => this.setKeranjang(response.data))
       .catch(function (error) {
         console.log("Gagal :", error);

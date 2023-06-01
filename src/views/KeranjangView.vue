@@ -140,7 +140,7 @@ export default {
     },
     hapusKeranjang(id) {
       axios
-        .delete("http://localhost:3000/keranjangs/" + id)
+        .delete("https://kedu3h.sse.codesandbox.io/keranjangs/" + id)
         .then(() => {
           this.$toast.error("Item Berhasil Dihapus", {
             type: "error",
@@ -149,7 +149,7 @@ export default {
             dismissible: true,
           });
           axios
-            .get("http://localhost:3000/keranjangs")
+            .get("https://kedu3h.sse.codesandbox.io/keranjangs")
             .then((response) => {
               this.setKeranjang(response.data);
             })
@@ -165,13 +165,13 @@ export default {
       if(this.pesan.nama && this.pesan.noMeja){
         this.pesan.keranjangs = this.keranjangs;
         axios
-          .post("http://localhost:3000/pesanans", this.pesan)
+          .post("https://kedu3h.sse.codesandbox.io/pesanans", this.pesan)
           .then(() => {
 
             // Hapus Semua Keranjang
             this.keranjangs.map(function(item){
               return  axios
-              .delete("http://localhost:3000/keranjangs/" + item.id)
+              .delete("https://kedu3h.sse.codesandbox.io/keranjangs/" + item.id)
               .catch((error) => console.log("Gagal :", error));
             });
 
@@ -198,7 +198,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3000/keranjangs")
+      .get("https://kedu3h.sse.codesandbox.io/keranjangs")
       .then((response) => this.setKeranjang(response.data))
       .catch(function (error) {
         console.log("Gagal :", error);

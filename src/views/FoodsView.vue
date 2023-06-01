@@ -62,7 +62,7 @@ export default {
     },
     searchFood(){
       axios
-      .get("http://localhost:3000/products?q="+this.search)
+      .get("https://kedu3h.sse.codesandbox.io/products?q="+this.search)
       .then((response) => this.setProduct(response.data))
       .catch(function (error) {
         // handle error
@@ -72,7 +72,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3000/products")
+      .get("https://kedu3h.sse.codesandbox.io/products")
       .then((response) => this.setProduct(response.data))
       .catch(function (error) {
         console.log("Gagal :", error);
